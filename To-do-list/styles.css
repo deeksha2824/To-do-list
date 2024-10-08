@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff9e6; /* Light beige background */
+    margin: 0;
+    padding: 20px;
+}
+
+.logo {
+    display: block;              /* Makes it a block element */
+    margin: 20px auto;         /* Centers the logo horizontally */
+    max-width: 200px;          /* Limit the maximum width of the logo */
+    height: auto;               /* Maintain aspect ratio */
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background:#cff1fc; /* Pastel Pink */
+    padding: 20px;
+    border-radius: 10px; /* Make corners rounder for a softer look */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Adds depth with shadow */
+    transform: translateZ(0); /* Creates a new stacking context for better shadow effect */
+    perspective: 1000px; /* Defines how far the 3D element is from the viewer */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+/* Add a hover effect for the 3D effect */
+.container:hover {
+    transform: translateY(-10px) scale(1.02); /* Slightly lift and scale on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: calc(100% - 50px);
+    padding: 10px;
+    border: 1px solid #f4f6eb;
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color:#4781b8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:#4a6193;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* Align items vertically centered */
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: rgb(108, 108, 108);
+}
+
+li.completed .task-image {
+    opacity: 0.5;                 /* Dim the image to indicate completion */
+}
+
+.checkmark {
+    color: #0f6d04; /* Green color for checkmark */
+    margin-right: 10px; /* Space between checkmark and text */
+}
+
+.delete-btn {
+    background-color: #ec7a7a; /* Initial background color */
+    color: white;              /* Initial text color */
+    border: none;              /* Remove default border */
+    border-radius: 5px;       /* Rounded corners */
+    cursor: pointer;           /* Pointer cursor on hover */
+    padding: 5px 10px;        /* Padding for button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.delete-btn:hover {
+    background-color: #f1a5ad; /* Darker red on hover */
+    transform: scale(1.05);     /* Slightly enlarge on hover */
+}
+
+
+img {
+    width: 50px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between image and task text */
+}
+
